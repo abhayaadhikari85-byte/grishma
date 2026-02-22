@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>security</title>
+
+    <style>
+
+        .body
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            align-content: center;
+        }
+        .pass
+        {
+           height: 400px; 
+           width: 330px;
+           
+           margin: 10px;
+           padding: 15px;
+           gap: 15px;
+           align-items: center;
+           background-color: aliceblue;
+           border: 3px solid black;
+           border-radius: 15px;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+        }  
+        .btn 
+            {
+                padding: 10px;
+                width: 100px;
+                background-color: pink;
+                color: rgb(41, 18, 248);
+                border: 1px solid black;
+                border-radius: 15px;
+                font-family: Arial, Helvetica, sans-serif;
+                transition: 0.2s ease;
+            }
+         .btn:hover
+             {
+                background-color: rgb(67, 220, 151);
+                color: white;
+                border: 1px solid black;
+                border-radius: 15px;
+                font-family: Arial, Helvetica, sans-serif;
+                transform: scale(1.1);
+            }
+    </style>
+    <script>
+        
+        function check()
+        {
+            const input = document.getElementById("code").value.trim().toLowerCase();
+                if (input === "grishu")
+                    {
+                        alert ("Access granted!");
+                        window.location.href= "home.html"
+                    }
+                else 
+                    {
+                        alert("access denied");
+                    }
+        }
+
+    </script>
+
+
+
+    
+</head>
+<body class="body">
+    <form>
+        <div class="pass">
+        <label for="code"> Enter the code word: </label>
+        <input type="password" name="code" id="code" class="code" placeholder="code">
+        <br>
+        <button type="button" onclick="check()" aria-placeholder="submit" class="btn"> submit </button>
+        </div>
+    </form>
+</body>
+
+</html>
